@@ -3,68 +3,149 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>My Portfolio</title>
-		<link rel="stylesheet" href="styling/main.css" />
+		<meta
+			name="description"
+			content="Emmanuel Leparakuo's Portfolio - Software Engineer and Web Developer" />
+		<meta
+			name="keywords"
+			content="web developer, software engineer, portfolio, projects, HTML, CSS, JavaScript" />
+		<meta name="author" content="Emmanuel Leparakuo" />
+		<title>Emmanuel Leparakuo - Portfolio</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/script.js" defer></script>
 	</head>
 	<body>
 		<header>
 			<nav>
-				<ul>
+				<div class="logo">Emmanuel 254</div>
+				<button class="menu-toggle" aria-label="Toggle menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<ul class="nav-links">
+					<li><a href="https://x.com">Twitter</a></li>
+					<li><a href="https://github.com">GitHub</a></li>
+					<li><a href="https://linkedin.com">LinkedIn</a></li>
+				</ul>
+				<ul class="nav-links">
+					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
-					<li><a href="#projects">Projects</a></li>
 					<li><a href="#skills">Skills</a></li>
+					<li><a href="#projects">Projects</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
-			<h1>Your Name</h1>
+			<button class="theme-toggle" aria-label="Toggle theme">
+				<svg
+					class="sun-icon"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"></svg>
+				<svg
+					class="moon-icon"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"></svg>
+			</button>
 		</header>
 
-		<section id="about">
-			<h2>About Me</h2>
-			<p>Write a short bio about yourself here.</p>
-		</section>
+		<main>
+			<section id="home">
+				<h1>Emmanuel Leparakuo</h1>
+				<p>Software Engineer & Web Developer</p>
+				<p>
+					I am currently studying at Moringa School, I am eager to start my
+					career in tech, focusing on frontend and backend development. I aim to
+					build intuitive, user-friendly websites and web applications.
+				</p>
+			</section>
 
-		<section id="projects">
-			<h2>Projects</h2>
-			<div class="project-grid">
-				<div class="project-item">
-					<h3>Project 1</h3>
-					<p>My personal Portfolio</p>
-					<button>View More</button>
-					<video width="320" height="240" controls>
-						<source src="movie.mp4" type="video/mp4" />
-						<source src="movie.ogg" type="video/ogg" />
-						Your browser does not support the video tag.
-					</video>
+			<section id="about">
+				<h2>About Me</h2>
+				<p>
+					Hi, I'm Emmanuel, an aspiring software engineer with a strong
+					foundation in web development. I'm passionate about building
+					intuitive, user-friendly websites and web applications. Currently
+					studying at Moringa School, I am eager to start my career in tech,
+					focusing on frontend and backend development.
+				</p>
+				<p>
+					My journey in tech began with learning HTML, CSS, and JavaScript, and
+					now I am expanding my skills into backend technologies and databases.
+					I am a fast learner, always seeking new challenges, and I love working
+					on collaborative projects.
+				</p>
+			</section>
+
+			<section id="skills">
+				<h2>Skills</h2>
+				<ul>
+					<li>HTML5, CSS3, JavaScript</li>
+					<li>Responsive Web Design</li>
+					<li>Git & GitHub for version control</li>
+					<li>JavaScript frameworks</li>
+				</ul>
+			</section>
+
+			<section id="projects">
+				<h2>My Projects</h2>
+				<div class="project-grid">
+					<div class="project">
+						<h3>Portfolio Project</h3>
+						<p>
+							A responsive portfolio website showcasing my skills and projects.
+							Built with HTML, CSS, and JavaScript.
+						</p>
+						<img src="images/image.png" alt="Portfolio Project" />
+					</div>
+					<div class="project">
+						<h3>Coming Soon!</h3>
+						<p>Coming Soon!</p>
+					</div>
+					<div class="project">
+						<h3>Coming Soon!</h3>
+						<p>Coming Soon!</p>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section id="skills">
-			<h2>Skills</h2>
-			<ul>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>JavaScript</li>
-			</ul>
-		</section>
+			<section id="contact">
+				<h2>Contact Me</h2>
+				<p>
+					Have a question or want to work together? Fill out the form below:
+				</p>
+				<form id="contact-form">
+					<input
+						type="text"
+						id="name"
+						name="name"
+						placeholder="Your Name"
+						required />
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="Your Email"
+						required />
+					<textarea
+						id="message"
+						name="message"
+						placeholder="Your Message"
+						required></textarea>
+					<button type="submit">Send Message</button>
+				</form>
+			</section>
+		</main>
 
-		<section id="contact">
-			<h2>Contact Me</h2>
-			<form id="contact-form">
-				<label for="name">Name</label>
-				<input type="text" id="name" required />
+		<footer>
+			<p>
+				&copy; <span id="year"></span> <b>Emmanuel Leparakuo</b> All rights
+				reserved.
+			</p>
+		</footer>
 
-				<label for="email">Email</label>
-				<input type="email" id="email" required />
-
-				<label for="message">Message</label>
-				<textarea id="message" required></textarea>
-
-				<button type="submit">Submit</button>
-			</form>
-		</section>
-
-		<script src="js/main.js"></script>
+		<script>
+			const currentYear = new Date().getFullYear();
+			document.getElementById('year').textContent = currentYear;
+		</script>
 	</body>
 </html>
