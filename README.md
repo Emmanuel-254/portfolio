@@ -31,7 +31,7 @@ Navigate to `localhost:5500` in your browser to view the portfolio.
 
 ## Live link
 
-[portfolio](https://emmanuel-254.github.io/portfolio/)
+(https://emmanuel-254.github.io/portfolio/)
 
 ## Known bugs
 
